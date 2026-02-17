@@ -134,7 +134,16 @@ class HorseRaces:
             EXAMPLE: {'Gold Ship': 16.5, 'Daiwa Scarlet': 17.2}
         '''
         averages = {}
-        
+        for horse in self.race_dict:
+            total = 0
+            horse_results = self.race_dict[horse]
+            for time in horse_results.values():
+                total += time
+            avg = total / len(horse_results)
+            averages[horse] = avg
+
+        return averages
+
 
 ###############################################################################
 ##### DO NOT MODIFY THE UNIT TESTS BELOW!
