@@ -115,7 +115,11 @@ class HorseRaces:
         '''
         best_times = {}
         for horse in self.race_dict:
-            
+            results = self.horse_fastest_race(horse)
+            best_times[horse] = results
+        return best_times
+
+
 
 ###############################################################################
 ##### TASK 4
@@ -129,7 +133,8 @@ class HorseRaces:
             A dictionary with each horse and their average time.
             EXAMPLE: {'Gold Ship': 16.5, 'Daiwa Scarlet': 17.2}
         '''
-        pass
+        averages = {}
+        
 
 ###############################################################################
 ##### DO NOT MODIFY THE UNIT TESTS BELOW!
